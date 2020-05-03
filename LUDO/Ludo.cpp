@@ -67,9 +67,9 @@ void Ludo::play()
 	int NOP; 
 	cin >> NOP;
 	init(NOP);
+	DisplayBoard();
 	do
 	{
-		DisplayBoard();
 		PrintTurnMsg();
 		CalculateMove(); //gets dice rolls
 		int c = 0;
