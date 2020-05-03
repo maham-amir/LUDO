@@ -39,7 +39,7 @@ bool Ludo::iskill()
 }
 void Ludo::init(int NOP)
 {
-
+	Players.resize(NOP);
 }
 void Ludo::Update()
 {
