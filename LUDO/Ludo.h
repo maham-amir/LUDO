@@ -5,6 +5,7 @@ using namespace std;
 class Player;
 class Position;
 class Box;
+class Piece;
 
 #pragma once
 class Ludo
@@ -23,8 +24,9 @@ public:
 	bool IsValidDestination();
 	bool IsVacantSpot();
 	void RemovePlayer();
+	Piece getSelectedPiece();
 	void play();
-	//code by BSCS19065
+  	//code by BSCS19065
 	bool iskill();
 	void init();
 	void Update();
@@ -34,4 +36,3 @@ public:
 	void AddWinnerToList();
 	// end code by BSCS19065
 };
-
