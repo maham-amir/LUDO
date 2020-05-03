@@ -27,3 +27,7 @@ void Ludo::RemovePlayer()
 {
 
 }
+void Ludo::play()
+{
+
+}

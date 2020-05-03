@@ -23,6 +23,6 @@ public:
 	bool IsValidDestination();
 	bool IsVacantSpot();
 	void RemovePlayer();
-
+	void play();
 };
 
