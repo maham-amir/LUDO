@@ -23,5 +23,6 @@ public:
 	bool IsValidDestination();
 	bool IsVacantSpot();
 	void RemovePlayer();
+
 };
 
