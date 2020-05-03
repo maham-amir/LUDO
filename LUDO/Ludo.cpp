@@ -31,3 +31,33 @@ void Ludo::play()
 {
 
 }
+//Code by BSCS19065
+bool Ludo::iskill()
+{
+	return false;
+}
+void Ludo::init()
+{
+
+}
+void Ludo::Update()
+{
+
+}
+void Ludo::Highlight()
+{
+
+}
+void Ludo::UnHighlight()
+{
+
+}
+void Ludo::DisplayBoard()
+{
+
+}
+void Ludo::AddWinnerToList()
+{
+
+}
+//end Code by BSCS19065

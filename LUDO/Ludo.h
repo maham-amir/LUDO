@@ -24,5 +24,14 @@ public:
 	bool IsVacantSpot();
 	void RemovePlayer();
 	void play();
+	//code by BSCS19065
+	bool iskill();
+	void init();
+	void Update();
+	void Highlight();
+	void UnHighlight();
+	void DisplayBoard();
+	void AddWinnerToList();
+	// end code by BSCS19065
 };
 
