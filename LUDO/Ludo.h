@@ -15,6 +15,14 @@ class Ludo
 	vector<Player*>PlayersWon;
 	vector<Position>Stops;
 	vector<Box*>Boxes;
+public:
+	void ChangeTurn();
+	void PrintTurnMsg();
+	void Rolldice();
+	bool IsValidSelection();
+	bool IsValidDestination();
+	bool IsVacantSpot();
+	void RemovePlayer();
 
 };
 
