@@ -28,7 +28,7 @@ public:
 	void play();
   	//code by BSCS19065
 	bool iskill();
-	void init();
+	void init(int);
 	void Update();
 	void Highlight();
 	void UnHighlight();

@@ -37,7 +37,7 @@ bool Ludo::iskill()
 {
 	return false;
 }
-void Ludo::init()
+void Ludo::init(int NOP)
 {
 
 }
@@ -89,14 +89,14 @@ void Ludo::play()
 				cin >> boxnum;
 			} while (IsValidDestination());
 
-			Unhighlight();
-			UpdateBoard();
+			UnHighlight();
+			Update();
 		} while (c < DiceRolls.size());
 		
 		if (Players[Plyturn]->Pieces.size() == 0)
 		{
-			PlayersWon.push_back(Players[Plyturn]);
-			Players.erase(Players.begin()+Plyturn);
+			AddWinnerToList();
+			RemovePlayer();
 		}
 
 		ChangeTurn();
