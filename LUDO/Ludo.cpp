@@ -1,5 +1,4 @@
 #include "Ludo.h"
-#include "Piece.h"
 void Ludo::ChangeTurn()
 {
 	for (int i = 0; i < sizeof(Players); i++)
@@ -63,35 +62,6 @@ void Ludo::RemovePlayer()
 	for (int i = 0; i < sizeof(P); i++)
 		Players[i] = P[i];
 	delete Players[sizeof(P)];
-}
-//Code by BSCS19065
-bool Ludo::iskill()
-{
-	return false;
-}
-void Ludo::init(int NOP)
-{
-
-}
-void Ludo::Update()
-{
-
-}
-void Ludo::Highlight()
-{
-
-}
-void Ludo::UnHighlight()
-{
-
-}
-void Ludo::DisplayBoard()
-{
-
-}
-void Ludo::AddWinnerToList()
-{
-
 }
 //end Code by BSCS19065
 void Ludo::play()
