@@ -2,35 +2,67 @@
 #include "Piece.h"
 void Ludo::ChangeTurn()
 {
-
+	for (int i = 0; i < sizeof(Players); i++)
+	{
+		if (i == Plyturn)
+		{
+			Plyturn = i + 1;
+			return;
+		}
+		else
+			continue;
+	}
 }
 void Ludo::PrintTurnMsg()
 {
-
+	cout << "Player " << Players[Plyturn] << " Turn";
 }
 void Ludo::Rolldice()
 {
-
+	int D;
+	D = (rand() % 6);
+	DiceRolls = D + 1;
+}
+void Ludo::SelectPiece()
+{
+	cin >> S.r >> S.c;
+}
+void Ludo::SelectDestination()
+{
+	cin >> E.r >> E.c;
 }
 bool Ludo::IsValidSelection()
 {
-	return true;
+	if (B[S.r][S.c] != nullptr && B[S.r][S.c]->GetNum() == Plyturn)
+		return true;
+	else
+		return false;
 }
 bool Ludo::IsValidDestination()
 {
-	return true;
+	if ((E.r - S.r == (DiceRolls -1) || E.c - S.c == (DiceRolls - 1)) && B[E.r][E.c]->GetNum() != Plyturn)
+		return true;
+	else
+		return false;
 }
+
 bool Ludo::IsVacantSpot()
 {
-	return true;
+	if (B[E.r][E.c] == nullptr)
+		return true;
+	else
+		return false;
 }
 void Ludo::RemovePlayer()
 {
-
-}
-Piece Ludo::getSelectedPiece()
-{
-
+	vector <Player*> P;
+	for (int i = 0; i < Plyturn; i++)
+		P[i] = Players[i];
+	for (int i = Plyturn; i < sizeof(Players) ; i++)
+		P[i] = Players[i+1];
+	for (int i = 0; i < sizeof(P); i++)
+		Players[i] = P[i];
+	delete Players[sizeof(P)];
 }
 //Code by BSCS19065
 bool Ludo::iskill()
