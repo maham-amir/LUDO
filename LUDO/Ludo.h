@@ -1,12 +1,11 @@
 #include<iostream>
 #include<vector>
+#include "Position.h"
 using namespace std;
 
 class Player;
-class Position;
 class Box;
-class Piece;
-
+class Board;
 #pragma once
 class Ludo
 {
