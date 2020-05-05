@@ -31,7 +31,7 @@ void Ludo::RemovePlayer()
 }
 Piece* Ludo::getSelectedPiece()
 {
-
+	return Players[Plyturn]->Pieces[0];
 }
 
 bool Ludo::iskill()
