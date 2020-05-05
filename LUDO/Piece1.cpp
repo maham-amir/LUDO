@@ -6,6 +6,7 @@ Piece1::Piece1():Piece()
 
 bool Piece1::otherPiecePresent(int rNum)
 {
+	//for killing
 	return true;
 }
 
