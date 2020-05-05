@@ -24,12 +24,36 @@
     <ClCompile Include="Piece.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Piece1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Piece2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Piece3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Piece4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ludo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Piece.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Piece1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Piece2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Piece3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Piece4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
