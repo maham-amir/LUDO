@@ -1,14 +1,12 @@
 #pragma once
 #include "Piece.h"
 class Piece3: public Piece
-
 {
+public:
+	friend class Ludo;
 	Piece3();
-	bool otherPiecePresent(int);
-	bool isKilling(int);
-	bool isKilled();
-	bool isHomed(int);
-	void bringOut(int);
+	void draw();
+	void undraw();
 
 };
 

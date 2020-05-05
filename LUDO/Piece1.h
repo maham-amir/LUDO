@@ -2,13 +2,11 @@
 #include "Piece.h";
 class Piece1: public Piece
 {
+
+public:
+	friend class Ludo;
 	Piece1();
-	bool otherPiecePresent(int);
-	bool isKilling(int);
-	bool isKilled();
-	bool isHomed(int);
-	void bringOut(int);
-
-
+	void draw();
+	void undraw();
 };
 
