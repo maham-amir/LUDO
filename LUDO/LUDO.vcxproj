@@ -140,11 +140,19 @@
   <ItemGroup>
     <ClCompile Include="Ludo.cpp" />
     <ClCompile Include="Piece.cpp" />
+    <ClCompile Include="Piece1.cpp" />
+    <ClCompile Include="Piece2.cpp" />
+    <ClCompile Include="Piece3.cpp" />
+    <ClCompile Include="Piece4.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ludo.h" />
     <ClInclude Include="Piece.h" />
+    <ClInclude Include="Piece1.h" />
+    <ClInclude Include="Piece2.h" />
+    <ClInclude Include="Piece3.h" />
+    <ClInclude Include="Piece4.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
