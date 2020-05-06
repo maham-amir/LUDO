@@ -24,9 +24,10 @@ public:
 	bool IsValidDestination();
 	bool IsVacantSpot();
 	void RemovePlayer();
-	Piece getSelectedPiece();
+
+	Piece* getSelectedPiece();
 	void play();
-  	//code by BSCS19065
+  	
 	bool iskill();
 	void init(int);
 	void Update();

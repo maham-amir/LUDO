@@ -1,5 +1,6 @@
 #include "Ludo.h"
 #include "Piece.h"
+#include "Player.h"
 void Ludo::ChangeTurn()
 {
 
@@ -28,12 +29,13 @@ void Ludo::RemovePlayer()
 {
 
 }
-Piece Ludo::getSelectedPiece()
+Piece* Ludo::getSelectedPiece()
 {
-
+	return Players[Plyturn]->Pieces[0];
 }
+
 //Code by BSCS19065
-bool Ludo::iskill(Position EP)
+bool Ludo::iskill()
 {
 	//assuming B is array of boxes.
 	return false;
@@ -68,7 +70,7 @@ void Ludo::AddWinnerToList(Player* Won)
 {
 	PlayersWon.push_back(Won);	
 }
-//end Code by BSCS19065
+
 void Ludo::play()
 {
 	int NOP; 
@@ -82,13 +84,14 @@ void Ludo::play()
 		int c = 0;
 		do
 		{
-			Piece p;
+			Piece* p;
 			do
 			{
 				p = getSelectedPiece();
 			} while (!IsValidSelection());
 
 			Highlight();
+
 
 			do
 			{
