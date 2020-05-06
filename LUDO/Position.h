@@ -1,8 +1,9 @@
-#pragma once
-struct Position
+#include "Position.h"
+Position::Position(int bn = 0) : BN(bn)
 {
-	int r, c;
-public:
-	Position(int R = 0, int C = 0);
-	~Position();
-};
+
+}
+Position::~Position()
+{
+
+}
