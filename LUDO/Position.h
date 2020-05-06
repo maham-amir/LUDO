@@ -1,9 +1,13 @@
-#include "Position.h"
-Position::Position(int bn = 0) : BN(bn)
+#pragma once
+#include "Player.h"
+struct Position
 {
-
-}
-Position::~Position()
-{
-
-}
+	int BN;
+public:
+	Position(int bn = 0);
+	int GetColor()
+	{
+		return c;
+	}
+	~Position();
+};
