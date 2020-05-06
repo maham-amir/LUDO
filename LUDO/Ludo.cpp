@@ -34,12 +34,20 @@ Piece* Ludo::getSelectedPiece()
 	return Players[Plyturn]->Pieces[0];
 }
 
+//Code by BSCS19065
 bool Ludo::iskill()
 {
+	//assuming B is array of boxes.
 	return false;
 }
 void Ludo::init(int NOP)
 {
+	//Players.resize(NOP);
+	//PlayersWon.resize(NOP);
+	for (int i = 0; i < NOP; i++)
+	{
+		Players.push_back(new Player());
+	}
 
 }
 void Ludo::Update()
@@ -58,9 +66,9 @@ void Ludo::DisplayBoard()
 {
 
 }
-void Ludo::AddWinnerToList()
+void Ludo::AddWinnerToList(Player* Won)
 {
-
+	PlayersWon.push_back(Won);	
 }
 
 void Ludo::play()

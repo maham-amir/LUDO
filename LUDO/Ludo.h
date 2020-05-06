@@ -34,6 +34,6 @@ public:
 	void Highlight();
 	void UnHighlight();
 	void DisplayBoard();
-	void AddWinnerToList();
-	
+	void AddWinnerToList(Player*);
+	// end code by BSCS19065
 };
