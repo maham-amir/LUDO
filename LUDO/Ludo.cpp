@@ -101,4 +101,3 @@ void Ludo::play()
 
 	} while (Players.size() > 1);
 }
-
