@@ -18,6 +18,7 @@ class Ludo
 	vector<Box*>Boxes;
 	Position S, E;
 public:
+	void Play();
 	int Version();
 	void ChangeTurn();
 	void PrintTurnMsg();
