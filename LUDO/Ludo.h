@@ -2,27 +2,27 @@
 #include<vector>
 #include "Position.h"
 using namespace std;
-
+class Piece;
 class Player;
 class Box;
-class Board;
 #pragma once
 class Ludo
 {
 	vector<Player*>Players;
 	int Plyturn;
-	int DiceRolls;
+	int Ver;
+	vector <int> DiceRolls;
+	vector <Piece*> Pieces; // I am not sure about this.....
 	vector<Player*>PlayersWon;
 	vector<Position>Stops;
 	vector<Box*>Boxes;
-	vector<Board**>B;
 	Position S, E;
 public:
+	int Version();
 	void ChangeTurn();
 	void PrintTurnMsg();
 	void Rolldice();
 	void SelectPiece();
-	void SelectDestination();
 	bool IsValidSelection();
 	bool IsValidDestination();
 	bool IsVacantSpot();
