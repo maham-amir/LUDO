@@ -12,14 +12,15 @@ class Ludo
 	int Plyturn;
 	int Ver;
 	vector <int> DiceRolls;
-	vector <Piece*> Pieces; // I am not sure about this.....
+	vector <Piece*> Pieces; // I am not sure about this..... REPLY: it is NOT needed
 	vector<Player*>PlayersWon;
 	vector<Position>Stops;
 	vector<Box*>Boxes;
 	Position S, E;
 public:
 	void Play();
-	int Version();
+	int getVersion();
+  void setVersion(int);
 	void ChangeTurn();
 	void PrintTurnMsg();
 	void Rolldice();
@@ -29,12 +30,16 @@ public:
 	bool IsVacantSpot();
 	void RemovePlayer();
   	//code by BSCS19065
+
+	Piece* getSelectedPiece();
+	void play();
+
 	bool iskill();
 	void init(int);
 	void Update();
 	void Highlight();
 	void UnHighlight();
 	void DisplayBoard();
-	void AddWinnerToList();
+	void AddWinnerToList(Player*);
 	// end code by BSCS19065
 };
