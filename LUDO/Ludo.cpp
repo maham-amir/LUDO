@@ -29,42 +29,39 @@ void Ludo::Rolldice()
 }
 void Ludo::SelectPiece()
 {
-	cin >> S.BN;
+	cin >> S.boxnum;
 }
 bool Ludo::IsValidSelection()
 {
-	if (Boxes[S.BN] != nullptr && Boxes[S.BN] -> GetColor == Boxes[S.BN] ->Pieces[Plyturn]->color)
-		return true;
-	else
+	if (Boxes[S.boxnum]->Pieces.size() == 0)
 		return false;
+
+	int nop = Boxes[S.boxnum]->Pieces.size();
+
+	for (int i = 0; i < nop; i++)
+	{
+		if (Boxes[S.boxnum]->Pieces[i]->color == Players[Plyturn]->color)
+			return true;
+	}
+
 }
 bool Ludo::IsValidDestination()
 {
-	if (E.BN - S.BN == (DiceRolls - 1 ) && Boxes[E.BN]->GetColor() != Boxes[S.BN]->Pieces[Plyturn]->color)
-		return true;
-	else
-		return false;
+	return true;
 }
 
 bool Ludo::IsVacantSpot()
 {
-	if (Boxes[E.BN] == nullptr)
+	if (Boxes[E.boxnum]->Pieces.size() == 0)
 		return true;
 	else
 		return false;
 }
 void Ludo::RemovePlayer()
-{
-	vector <Player*> P;
-	for (int i = 0; i < Plyturn; i++)
-		P[i] = Players[i];
-	for (int i = Plyturn; i < sizeof(Players); i++)
-		P[i] = Players[i + 1];
-	for (int i = 0; i < sizeof(P); i++)
-		Players[i] = P[i];
-	Players[Plyturn].erase(Players.begin() + Plyturn);
+{	
+	Players.erase(Players.begin() + Plyturn);
 }
-Piece* Ludo::getSelectedPiece()
+Piece* Ludo::getSelectedPiece(int bn)
 {
 	return Players[Plyturn]->Pieces[0];
 }
@@ -76,11 +73,10 @@ bool Ludo::iskill()
 }
 void Ludo::init(int NOP)
 {
-	//Players.resize(NOP);
-	//PlayersWon.resize(NOP);
+	//player start positions needed
 	for (int i = 0; i < NOP; i++)
 	{
-		Players.push_back(new Player());
+		Players.push_back(&Player());
 	}
 
 }
@@ -114,14 +110,14 @@ void Ludo::play()
 	do
 	{
 		PrintTurnMsg();
-		CalculateMove(); //gets dice rolls
+		// CalculateMove(); //gets dice rolls
 		int c = 0;
 		do
 		{
-			Piece* p;
+			int bn;
 			do
 			{
-				p = getSelectedPiece();
+				//get box number
 			} while (!IsValidSelection());
 
 			Highlight();
@@ -139,7 +135,7 @@ void Ludo::play()
 		
 		if (Players[Plyturn]->Pieces.size() == 0)
 		{
-			AddWinnerToList();
+			AddWinnerToList(Players[Plyturn]);
 			RemovePlayer();
 		}
 

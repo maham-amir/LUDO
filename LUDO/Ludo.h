@@ -5,6 +5,9 @@ using namespace std;
 class Piece;
 class Player;
 class Box;
+#include"Box.h"
+#include"Piece.h"
+#include"Player.h"
 #pragma once
 class Ludo
 {
@@ -12,7 +15,6 @@ class Ludo
 	int Plyturn;
 	int Ver;
 	vector <int> DiceRolls;
-	vector <Piece*> Pieces; // I am not sure about this..... REPLY: it is NOT needed
 	vector<Player*>PlayersWon;
 	vector<Position>Stops;
 	vector<Box*>Boxes;
@@ -30,7 +32,7 @@ public:
 	void RemovePlayer();
   	//code by BSCS19065
 
-	Piece* getSelectedPiece();
+	Piece* getSelectedPiece(int);
 	void play();
 
 	bool iskill();

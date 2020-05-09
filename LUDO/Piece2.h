@@ -3,6 +3,7 @@
 
 class Piece2: public Piece
 {
+	
 public:
 	friend class Ludo;
 	Piece2();
