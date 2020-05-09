@@ -1,6 +1,7 @@
 #include "Ludo.h"
 #include "Piece.h"
 #include "Player.h"
+#include"Box.h"
 int Ludo::getVersion()
 {
 	return Ver;
@@ -68,7 +69,6 @@ Piece* Ludo::getSelectedPiece()
 	return Players[Plyturn]->Pieces[0];
 }
 
-//Code by BSCS19065
 bool Ludo::iskill()
 {
 	//assuming B is array of boxes.
